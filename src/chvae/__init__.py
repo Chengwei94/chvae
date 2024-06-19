@@ -23,6 +23,6 @@ logger.addHandler(ch)
 # this prevents double outputs
 logger.propagate = False
 
-__all__ = ["MyModel", "MyModule", "MyPyroModel", "MyPyroModule"]
+__all__ = ["model", "module"]
 
 __version__ = version("chvae")
