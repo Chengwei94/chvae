@@ -4,9 +4,9 @@ requires = ["hatchling"]
 
 
 [project]
-name = "simple-scvi"
+name = "chvae"
 version = "0.0.1"
-description = "External and simple implementation of scVI"
+description = "Matroyshka representation scVI"
 readme = "README.md"
 requires-python = ">=3.8"
 license = {file = "LICENSE"}
@@ -16,9 +16,9 @@ authors = [
 maintainers = [
     {name = "Adam Gayoso", email = "adamgayoso@berkeley.edu"},
 ]
-urls.Documentation = "https://simple-scvi.readthedocs.io/"
-urls.Source = "https://github.com/scverse/simple-scvi"
-urls.Home-page = "https://github.com/scverse/simple-scvi"
+urls.Documentation = "https://SpatialSCVI.readthedocs.io/"
+urls.Source = "https://github.com/scverse/SpatialSCVI"
+urls.Home-page = "https://github.com/scverse/SpatialSCVI"
 dependencies = [
     "anndata",
     # for debug logging (referenced from the issue template)

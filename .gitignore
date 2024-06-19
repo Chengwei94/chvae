@@ -22,3 +22,11 @@ __pycache__/
 # IDEs
 /.idea/
 /.vscode/
+
+# Ignore everything in the notebooks directory
+notebooks/*
+
+# Except for these files
+!notebooks/norman.ipynb
+!notebooks/mcfarland.ipynb
+!notebooks/simulation.ipynb
