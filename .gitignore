@@ -30,3 +30,4 @@ notebooks/*
 !notebooks/norman.ipynb
 !notebooks/mcfarland.ipynb
 !notebooks/simulation.ipynb
+!notebooks/splatter.R

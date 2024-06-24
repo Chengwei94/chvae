@@ -28,10 +28,14 @@ class JaxSCVI(JaxTrainingMixin, BaseModelClass):
         AnnData object that has been registered via :meth:`~scvi.model.JaxSCVI.setup_anndata`.
     n_hidden
         Number of nodes per hidden layer.
-    n_latent
-        Dimensionality of the latent space.
+    n_bg_latent
+        Dimensionality of the background latent space.
+    n_salient_latent
+        Dimensionality of the salient latent space.
     dropout_rate
         Dropout rate for neural networks.
+    n_layer
+        Number of heirarchical layers for the background latent space.
     gene_likelihood
         One of:
 
@@ -131,10 +135,12 @@ class JaxSCVI(JaxTrainingMixin, BaseModelClass):
         adata
             AnnData object with equivalent structure to initial AnnData. If `None`, defaults to the
             AnnData object used to initialize the model.
+        layer
+            which layer to use. -1 refers to the salient space and -2 refers to the background space
         indices
             Indices of cells in adata to use. If `None`, all cells are used.
         return_scale
-            Whether to return the scale of the posterior distribution or a sample.
+            Whether to return the scale of the posterior distribution or a sample. Depreciated
         n_samples
             Number of samples to use for computing the latent representation.
         batch_size

@@ -5,7 +5,7 @@ from rich.console import Console
 from rich.logging import RichHandler
 
 
-# from ._mypyromodel import MyPyroModel, MyPyroModule
+from . import module, model
 
 logger = logging.getLogger(__name__)
 # set the logging level

@@ -6,7 +6,6 @@ import numpyro.distributions as dist
 from flax import linen as nn
 
 from scvi import REGISTRY_KEYS
-from scvi._types import Tunable
 from scvi.distributions import JaxNegativeBinomialMeanDisp as NegativeBinomial
 from scvi.module.base import JaxBaseModuleClass, LossOutput, flax_configure
 
@@ -155,13 +154,13 @@ class JaxVAE(JaxBaseModuleClass):
     n_input: int
     n_batch: int
     n_cats_per_cov: Optional[list]
-    n_hidden: Tunable[int] = 128
-    n_bg_latent: Tunable[int] = 10
-    n_salient_latent: Tunable[int] = 10
-    dropout_rate: Tunable[float] = 0.1
-    n_layer: Tunable[int] = 1
-    gene_likelihood: Tunable[str] = "nb"
-    eps: Tunable[float] = 1e-8
+    n_hidden: int = 128
+    n_bg_latent: int = 10
+    n_salient_latent: int = 10
+    dropout_rate: float = 0.1
+    n_layer: int = 1
+    gene_likelihood: str = "nb"
+    eps: float = 1e-8
     training: bool = True
 
     def setup(self):
